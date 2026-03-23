@@ -1,0 +1,112 @@
+
+
+:host {
+  display: block;
+}
+
+
+h3.fw-bold {
+  font-size: 1.45rem;
+  color: #1e1b4b;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem !important;
+  border-bottom: 2px solid #e0e7ff;
+  padding-bottom: 0.75rem;
+}
+
+
+.row.g-3 {
+  row-gap: 1rem !important;
+}
+
+
+p.text-muted.small {
+  font-size: 0.72rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #94a3b8 !important;
+  margin-bottom: 0.3rem !important;
+}
+
+
+p.fw-semibold {
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+
+.badge.bg-warning {
+  background: #fef3c7 !important;
+  color: #92400e !important;
+  border: 1px solid #fde68a;
+}
+
+.badge.bg-primary {
+  background: #dbeafe !important;
+  color: #1e40af !important;
+  border: 1px solid #bfdbfe;
+}
+
+.badge.bg-success {
+  background: #d1fae5 !important;
+  color: #065f46 !important;
+  border: 1px solid #a7f3d0;
+}
+
+.badge.bg-danger {
+  background: #fee2e2 !important;
+  color: #991b1b !important;
+  border: 1px solid #fecaca;
+}
+
+.badge.bg-secondary {
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+  border: 1px solid #e2e8f0;
+}
+
+
+.badge.fs-6 {
+  font-size: 0.82rem !important;
+  padding: 0.45em 1em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e0e7ff;
+  margin: 0.5rem 0 0.75rem !important;
+  opacity: 1;
+}
+
+
+.col-12 > p:last-child {
+  font-size: 0.93rem;
+  color: #475569;
+  line-height: 1.65;
+}
+
+
+p.text-muted.fw-semibold {
+  font-size: 0.85rem !important;
+  color: #b0bec5 !important;
+  font-family: 'Courier New', monospace;
+}
+
+
+.alert-warning {
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 0.65rem;
+  font-size: 0.9rem;
+  padding: 0.85rem 1.1rem;
+}
+
+.alert-link {
+  color: #b45309;
+  font-weight: 700;
+}
+
+.alert-link:hover {
+  color: #92400e;
+}

@@ -1,0 +1,76 @@
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h2 class="mb-0 fw-bold">📋 Task List</h2>
+  <span class="badge bg-secondary fs-6">
+    {{ tasks.length }} task{{ tasks.length !== 1 ? 's' : '' }}
+  </span>
+</div>
+
+
+<div *ngIf="tasks.length === 0" class="card shadow-sm text-center py-5">
+  <div class="card-body">
+    <p class="text-muted fs-5 mb-3">No tasks yet!</p>
+    <a routerLink="/tasks/new" class="btn btn-primary">+ Add your first task</a>
+  </div>
+</div>
+
+
+<div class="card shadow-sm" *ngIf="tasks.length > 0">
+  <div class="table-responsive">
+    <table class="table table-hover table-striped align-middle mb-0">
+      <thead class="table-dark">
+        <tr>
+          <th>Title</th>
+          <th>Status</th>
+          <th>Priority</th>
+          <th>Due Date</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+
+        
+          <td class="fw-semibold">{{ task.title }}</td>
+
+        
+          <td>
+            <span
+              class="badge rounded-pill"
+              [ngClass]="{
+                'bg-warning text-dark': task.status === 'Pending',
+                'bg-primary'          : task.status === 'In Progress',
+                'bg-success'          : task.status === 'Completed'
+              }">
+              {{ task.status }}
+            </span>
+          </td>
+
+         
+          <td>
+            <span
+              class="badge"
+              [ngClass]="{
+                'bg-danger'           : task.priority === 'High',
+                'bg-warning text-dark': task.priority === 'Medium',
+                'bg-secondary'        : task.priority === 'Low'
+              }">
+              {{ task.priority }}
+            </span>
+          </td>
+
+         
+          <td>{{ task.dueDate }}</td>
+
+        
+          <td class="text-center">
+            <a [routerLink]="['/tasks', task.id]" class="btn btn-outline-info btn-sm me-1">View</a>
+            <button (click)="toggle(task.id)" class="btn btn-outline-warning btn-sm me-1">Toggle</button>
+            <button (click)="delete(task.id)" class="btn btn-outline-danger btn-sm">Delete</button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<!-- Back button -->
+<div class="mb-3">
+  <a routerLink="/tasks" class="btn btn-outline-secondary btn-sm">
+    ← Back to List
+  </a>
+</div>
+
+<!-- Card with Bootstrap tab navigation for Info / Edit child routes -->
+<div class="card shadow-sm">
+  <div class="card-header p-0">
+    <ul class="nav nav-tabs card-header-tabs ms-2">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="info"
+          routerLinkActive="active">
+          📄 Info
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="edit"
+          routerLinkActive="active">
+          ✏️ Edit
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Child route content (TaskInfoComponent or TaskEditComponent) -->
+  <div class="card-body p-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>

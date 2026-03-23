@@ -1,0 +1,150 @@
+
+
+:host {
+  display: block;
+}
+
+h2.fw-bold {
+  font-size: 1.6rem;
+  color: #1e1b4b;
+  letter-spacing: -0.02em;
+}
+
+.badge.bg-secondary {
+  background: var(--tf-brand) !important;
+  font-size: 0.8rem;
+  padding: 0.45em 0.9em;
+  border-radius: 999px;
+}
+
+.card.text-center {
+  border: 2px dashed rgba(79, 70, 229, 0.25);
+  background: #fafbff;
+}
+
+.card.text-center p.text-muted {
+  color: #94a3b8 !important;
+}
+
+.card.shadow-sm {
+  overflow: hidden;   
+}
+
+
+.table-dark thead th {
+  background: #1e1b4b !important;
+  color: #c7d2fe;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.9rem 1.1rem;
+  white-space: nowrap;
+  border: none;
+}
+
+
+.table tbody tr {
+  border-bottom: 1px solid #f0f4ff;
+  transition: background var(--tf-transition);
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: #f5f3ff !important;
+}
+
+.table tbody td {
+  padding: 0.85rem 1.1rem;
+  vertical-align: middle;
+  color: #374151;
+}
+
+
+td.fw-semibold {
+  font-size: 0.95rem;
+  color: #1e1b4b;
+}
+
+
+.badge.bg-warning {
+  background: #fef3c7 !important;
+  color: #92400e !important;
+  border: 1px solid #fde68a;
+}
+
+.badge.bg-primary {
+  background: #dbeafe !important;
+  color: #1e40af !important;
+  border: 1px solid #bfdbfe;
+}
+
+.badge.bg-success {
+  background: #d1fae5 !important;
+  color: #065f46 !important;
+  border: 1px solid #a7f3d0;
+}
+
+
+.badge.bg-danger {
+  background: #fee2e2 !important;
+  color: #991b1b !important;
+  border: 1px solid #fecaca;
+}
+
+.badge.bg-secondary {
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+  border: 1px solid #e2e8f0;
+}
+
+
+td.text-center .btn {
+  font-size: 0.78rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.4rem;
+  font-weight: 600;
+}
+
+.btn-outline-info {
+  color: #0891b2;
+  border-color: #0891b2;
+}
+
+.btn-outline-info:hover {
+  background: #0891b2;
+  color: #fff;
+  border-color: #0891b2;
+}
+
+.btn-outline-warning {
+  color: #d97706;
+  border-color: #d97706;
+}
+
+.btn-outline-warning:hover {
+  background: #d97706;
+  color: #fff;
+  border-color: #d97706;
+}
+
+.btn-outline-danger:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+
+@media (max-width: 576px) {
+  td.text-center {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: flex-start;
+  }
+
+  td.text-center .btn {
+    width: 100%;
+  }
+}
