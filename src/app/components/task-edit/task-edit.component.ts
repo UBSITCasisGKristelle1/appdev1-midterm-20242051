@@ -26,7 +26,7 @@ export class TaskEditComponent {
 
   update(): void {
     if (this.task && this.task.title) {
-      this.service.updateTask(this.task);
+      this.service.updateTask(this.task.id, this.task);
       this.router.navigate(['/tasks']);
     }
   }

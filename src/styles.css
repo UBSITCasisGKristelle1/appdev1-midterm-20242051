@@ -1,1 +1,443 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles - TaskFlow Application */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+:root {
+  --primary: #0d6efd;
+  --primary-dark: #0b5ed7;
+  --primary-light: #0d47a1;
+  --secondary: #6c757d;
+  --text: #e4e6eb;
+  --text-muted: #a0aec0;
+  --bg-main: #1a1f2e;
+  --bg-card: #2d3748;
+  --bg-hover: #374151;
+  --border: #374151;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #1a1f2e;
+  color: #e4e6eb;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+}
+
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Content */
+.tf-main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.tf-main .container {
+  max-width: 1280px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  background: var(--bg-card);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-1px);
+}
+
+.card-header {
+  border-radius: 0.75rem 0.75rem 0 0;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 1.25rem 1.5rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+  color: var(--text);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Tables */
+.table {
+  border-collapse: collapse;
+  margin-bottom: 0;
+  color: var(--text);
+}
+
+.table thead th {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  padding: 1rem 1.25rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+.table tbody tr {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.table tbody tr:hover {
+  background: var(--bg-hover);
+  box-shadow: inset 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
+.table tbody td {
+  padding: 1rem 1.25rem;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border);
+}
+
+
+
+.table-hover tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Badges */
+.badge {
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+  border-radius: 0.5rem;
+  display: inline-block;
+  border: none;
+}
+
+.badge.bg-primary {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+}
+
+.badge.bg-success {
+  background: #10b981 !important;
+  color: #ffffff !important;
+}
+
+.badge.bg-warning {
+  background: #f59e0b !important;
+  color: #1f2937 !important;
+}
+
+.badge.bg-danger {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+.badge.bg-info {
+  background: #06b6d4 !important;
+  color: #ffffff !important;
+}
+
+.badge.bg-secondary {
+  background: var(--bg-hover) !important;
+  color: var(--text) !important;
+}
+
+.badge.rounded-pill {
+  border-radius: 999px;
+}
+
+/* Forms */
+.form-control, .form-select {
+  border-radius: 0.65rem;
+  border: 1.5px solid var(--border);
+  background: var(--bg-card);
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: var(--text);
+}
+
+.form-control::placeholder {
+  color: rgba(243, 244, 246, 0.5);
+  font-weight: 500;
+}
+
+.form-control:hover, .form-select:hover {
+  border-color: var(--primary);
+  background: var(--bg-card);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  background: var(--bg-card);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15), 0 2px 8px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+.form-label {
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-label .text-danger {
+  color: #ef4444;
+  margin-left: 0.2rem;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0.65rem;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.65rem 1.5rem;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #1a3568 100%);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+}
+
+.btn-outline-secondary {
+  border: 1.5px solid var(--border);
+  color: var(--text);
+  background: transparent;
+}
+
+.btn-outline-secondary:hover {
+  background: var(--bg-hover);
+  border-color: var(--primary);
+  color: var(--text);
+}
+
+.btn-outline-info, .btn-outline-warning, .btn-outline-danger {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-info:hover {
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+.btn-outline-warning:hover {
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.btn-outline-danger:hover {
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.btn-sm {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+}
+
+.btn-lg {
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 0.75rem;
+  border: none;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.alert-warning {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.alert-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.alert-link {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Spacing Utilities */
+.gap-2 { gap: 1rem; }
+.gap-3 { gap: 1.5rem; }
+.gap-4 { gap: 2rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+
+  .tf-main {
+    padding: 1.5rem 0;
+  }
+
+  .btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .form-control, .form-select {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+
+  .table thead th {
+    padding: 0.85rem 0.9rem;
+  }
+
+  .table tbody td {
+    padding: 0.85rem 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  body { font-size: 0.9rem; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .d-flex.gap-2 {
+    flex-direction: column;
+  }
+
+  .table {
+    font-size: 0.8rem;
+  }
+
+  .form-control, .form-select {
+    font-size: 0.85rem;
+  }
+
+  .card-header h5 {
+    font-size: 1rem;
+  }
+}

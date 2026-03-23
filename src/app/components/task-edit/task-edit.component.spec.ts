@@ -59,7 +59,7 @@ describe('TaskEditComponent', () => {
     spyOn(taskService, 'updateTask');
     spyOn(router, 'navigate');
     component.update();
-    expect(taskService.updateTask).toHaveBeenCalledWith(component.task!);
+    expect(taskService.updateTask).toHaveBeenCalledWith(component.task!.id, component.task!);
     expect(router.navigate).toHaveBeenCalledWith(['/tasks']);
   });
 

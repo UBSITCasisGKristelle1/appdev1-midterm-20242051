@@ -1,45 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-  <div class="container">
-
-
-    <a class="navbar-brand fw-bold" routerLink="/tasks">
-      ✅ <span class="text-primary">Task</span>Flow
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <span class="brand-icon me-2">✅</span>
+      <span>TaskFlow</span>
     </a>
 
-   
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#mainNav"
-      aria-controls="mainNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-   
-    <div id="mainNav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a
-            routerLink="/tasks"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            class="nav-link">
-            📋 Tasks
-          </a>
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-          <a
-            routerLink="/tasks/new"
-            routerLinkActive="active"
-            class="btn btn-primary btn-sm ms-lg-2 nav-link px-3">
-            ➕ New Task
-          </a>
+          <a routerLink="/tasks" routerLinkActive="active" class="nav-link">Tasks</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/tasks/new" class="nav-link">Add</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about" class="nav-link">About</a>
         </li>
       </ul>
     </div>
-
   </div>
 </nav>
