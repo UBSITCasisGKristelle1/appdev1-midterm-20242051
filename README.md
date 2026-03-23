@@ -2,19 +2,19 @@
 
 A lightweight, responsive browser-based Task Manager built with Angular 19+ and Bootstrap 5. TaskFlow allows users to create, edit, delete, and manage tasks with priority levels and status tracking.
 
-## 🎯 Project Overview
+## Project Overview
 
 **TaskFlow** is a modern web application for managing personal tasks efficiently. The application features a clean, intuitive interface and comprehensive task management capabilities including task creation, editing, status updates, and priority management.
 
 ### Key Features
 
-✅ **Add Tasks** - Create new tasks with title, description, due date, status, and priority  
-✅ **Edit Tasks** - Modify existing task details  
-✅ **Delete Tasks** - Remove tasks with confirmation dialog  
-✅ **Mark Status** - Toggle task status between Pending, In Progress, and Completed  
-✅ **View Tasks** - Browse all tasks in a responsive table format  
-✅ **Task Details** - View full task information on a dedicated detail page  
-✅ **Responsive Design** - Fully functional on mobile, tablet, and desktop devices  
+ **Add Tasks** - Create new tasks with title, description, due date, status, and priority  
+ **Edit Tasks** - Modify existing task details  
+ **Delete Tasks** - Remove tasks with confirmation dialog  
+ **Mark Status** - Toggle task status between Pending, In Progress, and Completed  
+ **View Tasks** - Browse all tasks in a responsive table format  
+**Task Details** - View full task information on a dedicated detail page  
+ **Responsive Design** - Fully functional on mobile, tablet, and desktop devices  
 
 ## 🛠 Tech Stack
 
@@ -25,7 +25,7 @@ A lightweight, responsive browser-based Task Manager built with Angular 19+ and 
 - **State Management**: Angular Service with in-memory storage
 - **Build Tool**: Angular CLI
 
-## 📋 Application Structure
+##  Application Structure
 
 ```
 src/app/
@@ -47,7 +47,7 @@ src/app/
 └── app.component.html           # Root template
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -75,7 +75,7 @@ npm start
 
 4. Open your browser and navigate to `http://localhost:4200/`
 
-## 📖 Usage
+##  Usage
 
 ### Adding a Task
 
@@ -97,9 +97,9 @@ npm start
 ### Editing a Task
 
 1. Click **"View"** on any task in the task list
-2. Navigate to the **"✏️ Edit"** tab
+2. Navigate to the **" Edit"** tab
 3. Modify the task details
-4. Click **"💾 Save Changes"** to update
+4. Click **" Save Changes"** to update
 
 ### Deleting a Task
 
@@ -112,7 +112,7 @@ npm start
 1. Click **"Toggle"** button next to any task to cycle through statuses
 2. Status updates immediately: Pending → In Progress → Completed → Pending
 
-## 🎨 UI Components
+##  UI Components
 
 ### Navbar
 - Responsive Bootstrap navbar with hamburger menu on mobile
@@ -156,13 +156,13 @@ npm start
 
 ```typescript
 interface Task {
-  id: number;                           // Unique identifier
-  title: string;                        // Task title
-  description: string;                  // Task description
-  dueDate: string;                      // ISO date format
-  status: 'Pending' | 'In Progress' | 'Completed';  // Current status
-  priority: 'Low' | 'Medium' | 'High';              // Priority level
-  createdAt?: Date;                     // Creation timestamp
+  id: number;                          
+  title: string;                      
+  description: string;                 
+  dueDate: string;                      
+  status: 'Pending' | 'In Progress' | 'Completed';  
+  priority: 'Low' | 'Medium' | 'High';              
+  createdAt?: Date;                    
 }
 ```
 
@@ -176,12 +176,12 @@ The application includes 4 sample tasks with:
 ## 🔧 Service Methods (TaskService)
 
 ```typescript
-getTasks(): Task[]                      // Get all tasks
-getTaskById(id: number): Task | undefined  // Get single task
-addTask(task: Partial<Task>): void      // Create new task
-updateTask(id: number, updatedTask: Partial<Task>): void  // Update task
-deleteTask(id: number): void            // Delete task
-toggleStatus(id: number): void          // Cycle through statuses
+getTasks(): Task[]                      
+getTaskById(id: number): Task | undefined 
+addTask(task: Partial<Task>): void     
+updateTask(id: number, updatedTask: Partial<Task>): void  
+deleteTask(id: number): void           
+toggleStatus(id: number): void          
 ```
 
 ## 🏗 Building for Production
